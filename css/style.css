@@ -191,7 +191,7 @@ article a {
 .card {
 	background-color: #66C05D;
 
-	width: 500px;
+	max-width: 500px;
 	height: 212px;
 }
 .last-page {
@@ -354,7 +354,7 @@ ul li a:hover {
 	.first-page-text p {
 		font-size: 20px;
 		display: block;
-		width: 400px;
+		max-width: 400px;
 	}
 	.first-page-text a {
 		font-size: 30px;
@@ -366,13 +366,85 @@ ul li a:hover {
 		display: grid;
 		grid-template-columns: repeat(2, 2fr);
 	}
-
+	section {
+		display: flex;
+		justify-content: space-around;
+	}
+	.special-title {
+		text-align: center;
+	}
 	article {
 		margin-bottom: 50px;
+	}
+	.first-page-text>p {
+		text-align: center;
 	}
 }
 @media (max-width: 930px) {
 	.first-footer {
+		flex-direction: column;
+	}
+	.second-footer {
+		flex-direction: column;
+	}
+	.second-navbar>ul {
+		padding-left: 0;
+	}
+}
+@media (max-width: 850px) {
+	.second-navbar>ul>li>a {
+		margin: 0 20px;
+	}
+	.first, .second {
+		border-radius: 50px;
+	}
+}
+@media (max-width: 730px) {
+	.second-navbar>ul>li>a {
+		margin: 0 10px;
+	}
+	.first-page-text>h2 {
+		font-size: 70px;
+	}
+	.button {
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+	}
+	.text-info-inside {
+		margin: 10px 0;
+	}
+	.text-info {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0;
+	}
+	.header-main-block {
+		flex-direction: column;
+	}
+}
+@media (max-width: 610px) {
+	.second-navbar>ul {
+		flex-direction: column;
+		text-align: center;
+	}
+	.second-navbar>ul>li {
+		margin: 5px 0;
+	}
+	.first-cards-text {
+		font-size: 14px;
+	}
+	.first-cards-icon {
+		display: none;
+	}
+	.section {
+		grid-template-columns: repeat(1, 1fr)
+	}
+	.first-page-text>h2 {
+		text-align: center;
+	}
+	.phone {
 		flex-direction: column;
 	}
 }
